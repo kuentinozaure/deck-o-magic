@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <containerCard v-if="isConnect"/>
+    <containerCard v-if="isConnect" />
     <div class="container" v-if="!isConnect">
       <div class="password-container">
-        <input type="password" class="password-input" v-model="password" placeholder="Mot de passe" @keyup.enter="onClickGoButton"/>
-        <div class="password-error" v-if="passwordOnError" >mot de passe incorrect ...</div>
+        <input
+          type="password"
+          class="password-input"
+          v-model="password"
+          placeholder="Mot de passe"
+          @keyup.enter="onClickGoButton"
+        />
+        <div class="password-error" v-if="passwordOnError">
+          mot de passe incorrect ...
+        </div>
       </div>
       <div class="button-container">
         <button type="button" v-on:click="onClickGoButton">Go</button>
@@ -14,7 +22,7 @@
 </template>
 
 <script>
-import containerCard from './components/containerCard.vue';
+import containerCard from "./components/containerCard.vue";
 export default {
   components: { containerCard },
   name: "App",
@@ -24,20 +32,20 @@ export default {
       password: "",
       PASSWORD_OF_THE_APP: "annaestmagique",
       isConnect: false,
-      numberOfTry: 0
+      numberOfTry: 0,
     };
   },
 
   computed: {
     passwordOnError() {
-      return this.numberOfTry !== 0 && !this.isConnect && this.password !== ""
+      return this.numberOfTry !== 0 && !this.isConnect && this.password !== "";
     },
   },
 
   methods: {
     onClickGoButton: function () {
-      this.isConnect = this.password === this.PASSWORD_OF_THE_APP
-      this.numberOfTry += 1
+      this.isConnect = this.password === this.PASSWORD_OF_THE_APP;
+      this.numberOfTry += 1;
     },
   },
 };
@@ -77,9 +85,8 @@ body {
 
 .password-error {
   padding-top: 1%;
-  color:#cf000a;
+  color: #cf000a;
   font-size: 20px;
   letter-spacing: 3px;
 }
-
 </style>

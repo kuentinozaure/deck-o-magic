@@ -6,7 +6,9 @@
       </div>
 
       <div class="title-container">
-        <div class="title-container-string">[{{type.toUpperCase()}}] - {{ title }}</div>
+        <div class="title-container-string">
+          [{{ type.toUpperCase() }}] - {{ title }}
+        </div>
       </div>
     </div>
   </div>
@@ -67,5 +69,33 @@ export default {
   width: auto;
   font-size: 20px;
   letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  [class*="name-title-container"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  [class*="name-container-round"] {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  [class*="name-container-round-title"] {
+    font-size: 20px;
+  }
+
+  [class*="title-container-string"] {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 </style>

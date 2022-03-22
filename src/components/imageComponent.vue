@@ -1,10 +1,7 @@
 <template>
   <!-- img card  -->
   <div class="image-container">
-    <img
-      v-bind:src="imageSrc"
-      class="img-size"
-    />
+    <img v-bind:src="imageSrc" class="img-size" />
   </div>
 </template>
 
@@ -18,7 +15,6 @@ export default {
 </script>
 
 <style scoped>
-
 .image-container {
   margin-left: 20%;
   margin-right: 20%;
@@ -30,5 +26,4 @@ export default {
   width: 100%;
   height: 50%;
 }
-
 </style>

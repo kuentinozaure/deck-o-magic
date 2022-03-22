@@ -1,8 +1,15 @@
 <template>
   <div class="card-container">
-    <top-component :title="getCardTitle" :user="getUserToPlay" :type="getTypeCard"/>
+    <top-component
+      :title="getCardTitle"
+      :user="getUserToPlay"
+      :type="getTypeCard"
+    />
     <image-component :imageSrc="getImage" />
-    <description-component :spotifyUrl="getMusic" :description="getDescription"/>
+    <description-component
+      :spotifyUrl="getMusic"
+      :description="getDescription"
+    />
   </div>
 </template>
 
@@ -53,15 +60,15 @@ export default {
     },
 
     getDescription() {
-        return this.CARD.description
-    }
+      return this.CARD.description;
+    },
   },
 };
 </script>
 
 <style scoped>
 .card-container {
-  background-color:#333333;
+  background-color: #333333;
   display: flex;
   flex-direction: column;
   margin-left: 10%;

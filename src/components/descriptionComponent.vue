@@ -12,7 +12,7 @@
     ></iframe>
 
     <div class="description-title">
-        {{description}}
+      {{ description }}
     </div>
   </div>
 </template>
@@ -42,5 +42,12 @@ export default {
   font-size: 25px;
   letter-spacing: 4px;
   flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 500px) {
+  [class*="description-title"] {
+    font-size: 12px;
+    text-align: justify;
+  }
 }
 </style>
