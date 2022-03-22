@@ -6,7 +6,7 @@
       </div>
 
       <div class="title-container">
-        <div class="title-container-string">{{ title }}</div>
+        <div class="title-container-string">[{{type.toUpperCase()}}] - {{ title }}</div>
       </div>
     </div>
   </div>
@@ -18,6 +18,7 @@ export default {
   props: {
     title: String,
     user: String,
+    type: String,
   },
 };
 </script>

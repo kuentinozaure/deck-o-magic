@@ -1,6 +1,6 @@
 <template>
   <div class="card-container">
-    <top-component :title="getCardTitle" :user="getUserToPlay" />
+    <top-component :title="getCardTitle" :user="getUserToPlay" :type="getTypeCard"/>
     <image-component :imageSrc="getImage" />
     <description-component :spotifyUrl="getMusic" :description="getDescription"/>
   </div>
