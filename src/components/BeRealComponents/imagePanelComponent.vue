@@ -32,6 +32,12 @@
         @change="onChangeImage()"
       />
     </div>
+
+    <div class="image-upload-panel-component">
+      <button type="button" v-on:click="onClickChangeActivity">
+        Tu veux changer d'activite ?
+      </button>
+    </div>
   </div>
 </template>
 
@@ -60,6 +66,10 @@ export default {
         photo: this.$refs.image.files[0],
       });
     },
+
+    onClickChangeActivity: () => {
+      location.reload();
+    },
   },
 };
 </script>
@@ -86,10 +96,11 @@ export default {
   flex: 1;
   width: 100%;
   height: auto;
-  background-color: #ede7f6;
 }
 
 .image-element {
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -103,6 +114,13 @@ export default {
 }
 
 .image-upload-panel-component {
+  margin-top: 1%;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.image-change-card-panel-component {
   margin-top: 1%;
   color: #fff;
   font-size: 20px;

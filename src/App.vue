@@ -6,16 +6,9 @@
 
 <script>
 import containerComponent from "./components/BeRealComponents/containerComponent.vue";
-import store from "./store";
 export default {
   components: { containerComponent },
   name: "App",
-
-  computed: {
-    getStatusOfConnexion: () => {
-      return store.getters.getStatusOfTheAuth;
-    },
-  },
 };
 </script>
 
