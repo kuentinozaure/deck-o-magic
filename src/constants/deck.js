@@ -7,6 +7,7 @@ export const DECK_OF_CARDS = [
       "https://www.wikihow.com/images_en/thumb/7/72/Confess-Step-9.jpg/v4-460px-Confess-Step-9.jpg.webp",
     description:
       "C est le moment de la ptite declaration qui fait plaisir, le moment de cuisiner l autre dans une tres bonne sauce, MIAM ...  Tu peux complimenter sur plein de point, le physique, la beaute, la tenue, sa chevelure, je sais pas apres demerde toi",
+    photos: [],
   },
   {
     title: "console.log('SVP mon frerot, une ptite disquette')",
@@ -16,6 +17,7 @@ export const DECK_OF_CARDS = [
       "https://ordinateurs.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/02/01180936/Floppy-Disk.jpg",
     description:
       "Bon c est le moment d'utiliser cette fameuse technologie disparue, la disquette, pour ca soit original ... Utilise tout ce que tu connais, musique, film, jeux video, je sais pas demerde toi ...",
+    photos: [],
   },
   {
     title: "C est le moment de faire monter la temperature entre vous ...",
@@ -25,6 +27,7 @@ export const DECK_OF_CARDS = [
       "https://cdn.akamai.steamstatic.com/steam/apps/1155940/capsule_616x353.jpg?t=1643028885",
     description:
       "Je vais pas te faire un ptit dessin ..., fait monter la temperature entre vous ... tout les moyens sont bon",
+    photos: [],
   },
   {
     title:
@@ -34,6 +37,7 @@ export const DECK_OF_CARDS = [
     image: "https://orpailleur.ca/wp-content/uploads/2017/02/resto.jpg",
     description:
       "Pates, pizza, sushi, burger, poutine ... C est le moment d allez au resto ou bien un ptit uber eat hein ;)",
+    photos: [],
   },
   {
     title: "Attention c est l heure du film, Next station -> Horny jail",
@@ -43,6 +47,7 @@ export const DECK_OF_CARDS = [
       "https://images.radio-canada.ca/q_auto,w_960/v1/ici-info/16x9/uneprem-salle-cinema.jpg",
     description:
       "C est le moment d un ptit moment film ou de series ... Netflix, Disney +, Prime Video, Streaming ... je ne suis pas tenu responsable de ce qui se passent durant le films ....",
+    photos: [],
   },
   {
     title: "C est l heure d un hug ... Be careful with that",
@@ -51,6 +56,7 @@ export const DECK_OF_CARDS = [
     image: "https://i.kym-cdn.com/photos/images/original/002/217/909/ff7.jpg",
     description:
       "C est le moment d enlacer l autre, de lui faire un gros calin (bebou tu me gnock ?). Je ne serais pas tenu responsable pour tout ce qui se passera durant cette action",
+    photos: [],
   },
   {
     title: "Eh ze barti, c est l heure de l activite entre vous",
@@ -60,6 +66,7 @@ export const DECK_OF_CARDS = [
       "https://i2.wp.com/www.ginorthwest.org/wp-content/uploads/2016/03/activities-2.png?fit=558%2C336&ssl=1",
     description:
       "Faite ce qu il vous plaira, cinema, marche, jeux video, coding (WTF), demerdez vous sortez faites un truc en sah",
+    photos: [],
   },
   {
     title: "Bon ca va vous couter cher, on s anvol bisou",
@@ -69,6 +76,7 @@ export const DECK_OF_CARDS = [
       "https://www.protegez-vous.ca/var/protegez_vous/storage/images/_aliases/article_banner/3/4/4/7/4707443-1-fre-CA/assurance-voyage-2.jpg",
     description:
       "Ok Ok Ok, c est l heure d un petit voyage, prenez vos billets, un hotels, un bnb, et partez et profitez en pour remplir votre to do list voyage ...",
+    photos: [],
   },
   {
     title:
@@ -79,5 +87,6 @@ export const DECK_OF_CARDS = [
       "https://health.clevelandclinic.org/wp-content/uploads/sites/3/2014/11/creditCardClean-1216533734-770x553-2.jpg",
     description:
       "Une nouvelle paire dans le viseur ? un cadeau que tu veut faire a l autres depuis longtemp ? te donner un raison de cop, c est le moment. Fuck les creances et le banquier juste cop",
+    photos: [],
   },
 ];

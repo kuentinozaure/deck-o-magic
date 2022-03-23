@@ -1,9 +1,15 @@
 <template>
   <div class="image-panel-component">
-    <div class="string-image-panel-component" v-if="getListOfBlobUrlFile.length > 0">
+    <div
+      class="string-image-panel-component"
+      v-if="getListOfBlobUrlFile.length > 0"
+    >
       Photo(s) des activite(s) precedente(s) :
     </div>
-    <div class="string-image-panel-component" v-if="getListOfBlobUrlFile.length <= 0">
+    <div
+      class="string-image-panel-component"
+      v-if="getListOfBlobUrlFile.length <= 0"
+    >
       Pas de photo pour cette carte :( ...
     </div>
     <div class="image-slider-component" v-if="getListOfBlobUrlFile.length > 0">
@@ -21,7 +27,7 @@
         type="file"
         id="avatar"
         name="avatar"
-        accept="image/png, image/jpeg, .heic"
+        accept="image/png, image/jpeg"
         ref="image"
         @change="onChangeImage()"
       />
@@ -30,18 +36,17 @@
 </template>
 
 <script>
+import store from "@/store";
 export default {
   name: "imagePanelComponent",
-  props: {},
-  data() {
-    return {
-      uploadFileUrl: File,
-      images: [],
-    };
+  props: {
+    type: String,
   },
+
   computed: {
     getListOfBlobUrlFile() {
-      return this.images.map((image) => window.URL.createObjectURL(image));
+      const photos = store.getters.getPhotosByCard(this.type).photos;
+      return photos.map((elem) => window.URL.createObjectURL(elem));
     },
   },
 
@@ -50,13 +55,10 @@ export default {
      * The method is trigger when user click on the choose a file button
      */
     onChangeImage() {
-      this.images.push(this.$refs.image.files[0]); // push the file object to the images array
-
-      console.log(this.getListOfBlobUrlFile);
-      this.uploadFileUrl = window.URL.createObjectURL(
-        this.$refs.image.files[0]
-      );
-      console.log(this.$refs.image.files[0]);
+      store.commit("addPhotoToCard", {
+        type: this.type,
+        photo: this.$refs.image.files[0],
+      });
     },
   },
 };

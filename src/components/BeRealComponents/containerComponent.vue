@@ -6,16 +6,14 @@
       :description="getDescription"
       :music="getMusic"
     />
-    <image-panel-component/>
+    <image-panel-component :type="getTypeCard"/>
   </div>
 </template>
 
 <script>
-import { DECK_OF_CARDS } from "@/constants/deck";
-import { USERS } from "@/constants/user";
-import { GET_RANDOM_CARD, GET_RANDOM_USER } from "@/utils/function";
 import cardComponent from "./cardComponent.vue";
 import ImagePanelComponent from './imagePanelComponent.vue';
+import store from '@/store';
 
 export default {
   components: { cardComponent, ImagePanelComponent },
@@ -23,8 +21,8 @@ export default {
 
   data() {
     return {
-      CARD: DECK_OF_CARDS[GET_RANDOM_CARD()],
-      USER: USERS[GET_RANDOM_USER()],
+      CARD: store.getters.getRandomCard,
+      USER: store.getters.getRandomUser,
     };
   },
 
