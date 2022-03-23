@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <containerCard v-if="isConnect" />
+    <container-component/>
+    <!-- <containerCard v-if="isConnect" />
     <div class="container" v-if="!isConnect">
       <div class="password-container">
         <input
@@ -17,14 +18,14 @@
       <div class="button-container">
         <button type="button" v-on:click="onClickGoButton">Go</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import containerCard from "./components/containerCard.vue";
+import containerComponent from './components/BeRealComponents/containerComponent.vue';
 export default {
-  components: { containerCard },
+  components: { containerComponent },
   name: "App",
 
   data() {
@@ -53,10 +54,10 @@ export default {
 
 <style>
 body {
-  padding-top: 2%;
+  padding: 2% 2% 2% 2%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: #222;
-  color: #fff5f5;
+  background-color: #311b92;
+  color: #222;
 }
 
 .container {

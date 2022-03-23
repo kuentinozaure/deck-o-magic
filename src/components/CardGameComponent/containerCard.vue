@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import DescriptionComponent from "./descriptionComponent.vue";
-import ImageComponent from "./imageComponent.vue";
-import topComponent from "./topComponent.vue";
-import { DECK_OF_CARDS } from "../constants/deck";
-import { USERS } from "../constants/user";
-import { GET_RANDOM_USER, GET_RANDOM_CARD } from "../utils/function";
+import DescriptionComponent from "../CardGameComponent/descriptionComponent.vue";
+import ImageComponent from "../CardGameComponent/imageComponent.vue";
+import topComponent from "../CardGameComponent/topComponent.vue";
+import { DECK_OF_CARDS } from "../../constants/deck";
+import { USERS } from "../../constants/user";
+import { GET_RANDOM_USER, GET_RANDOM_CARD } from "../../utils/function";
 export default {
   components: { topComponent, ImageComponent, DescriptionComponent },
   name: "ContainerCard",
